@@ -1,7 +1,16 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
 const Orders = () => {
-  return <div>Orders</div>;
+  const orders = useSelector((store) => store.orders);
+
+  return (
+    <div>
+      {orders.map((order) => {
+        return <div>{order.total}</div>;
+      })}
+    </div>
+  );
 };
 
 export default Orders;

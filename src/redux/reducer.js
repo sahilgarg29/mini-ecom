@@ -1,6 +1,7 @@
 import {
   ADD_ORDER,
   ADD_TO_CART,
+  CLEAR_CART,
   GET_PRODUCTS,
   UPDATE_QUANTITY,
 } from "./actionTypes";
@@ -31,6 +32,8 @@ export const cartReducer = (state = cartState, action) => {
 
         return newState;
       });
+    case CLEAR_CART:
+      return [];
     default:
       return state;
   }

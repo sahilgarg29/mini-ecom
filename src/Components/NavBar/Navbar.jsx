@@ -5,6 +5,7 @@ const Navbar = () => {
   return (
     <div>
       <Link to="/cart">Cart</Link>
+      <Link to="/orders">Orders</Link>
     </div>
   );
 };
