@@ -4,6 +4,7 @@ import Cart from "./Pages/Cart";
 import Home from "./Pages/Home";
 import Orders from "./Pages/Orders";
 import ProductDetails from "./Pages/ProductDetails";
+import { useEffect } from "react";
 
 function App() {
   return (

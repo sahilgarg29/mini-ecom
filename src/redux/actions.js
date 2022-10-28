@@ -1,5 +1,5 @@
 import axios from "axios";
-import { GET_PRODUCTS } from "./actionTypes";
+import { ADD_TO_CART, GET_PRODUCTS } from "./actionTypes";
 
 export const fetchProducts = (page) => (dispatch) => {
   axios
@@ -15,6 +15,13 @@ export const fetchProducts = (page) => (dispatch) => {
 export const getProducts = (payload) => {
   return {
     type: GET_PRODUCTS,
+    payload: payload,
+  };
+};
+
+export const addToCart = (payload) => {
+  return {
+    type: ADD_TO_CART,
     payload: payload,
   };
 };
