@@ -5,10 +5,12 @@ import Home from "./Pages/Home";
 import Orders from "./Pages/Orders";
 import ProductDetails from "./Pages/ProductDetails";
 import { useEffect } from "react";
+import Navbar from "./Components/NavBar";
 
 function App() {
   return (
     <div className="App">
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/product/:id" element={<ProductDetails />} />

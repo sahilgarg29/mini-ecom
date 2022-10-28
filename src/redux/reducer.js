@@ -1,4 +1,9 @@
-import { ADD_TO_CART, GET_PRODUCTS } from "./actionTypes";
+import {
+  ADD_ORDER,
+  ADD_TO_CART,
+  GET_PRODUCTS,
+  UPDATE_QUANTITY,
+} from "./actionTypes";
 
 const productState = [];
 
@@ -16,6 +21,26 @@ const cartState = [];
 export const cartReducer = (state = cartState, action) => {
   switch (action.type) {
     case ADD_TO_CART:
+      return [...state, { ...action.payload, quantity: 1 }];
+    case UPDATE_QUANTITY:
+      const newState = [...state];
+      newState.forEach((product) => {
+        if (product.id == action.payload.id) {
+          product.quantity = action.payload.quantity;
+        }
+
+        return newState;
+      });
+    default:
+      return state;
+  }
+};
+
+const orderState = [];
+
+export const orderReducer = (state = orderState, action) => {
+  switch (action.type) {
+    case ADD_ORDER:
       return [...state, action.payload];
     default:
       return state;
