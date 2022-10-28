@@ -5,7 +5,9 @@ import "./navbar.css";
 const Navbar = () => {
   return (
     <div className="nav">
-      <h1>Mini Ecommerce</h1>
+      <Link to="/">
+        <h1>Mini Ecommerce</h1>
+      </Link>
       <Link to="/cart">Cart</Link>
       <Link to="/orders">Orders</Link>
     </div>

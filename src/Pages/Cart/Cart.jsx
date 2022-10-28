@@ -34,7 +34,7 @@ const Cart = () => {
           onClick={() => {
             dispatch(
               addOrder({
-                id: new Date(),
+                id: Date.now(),
                 items: cartItems,
                 total: cartItems.reduce((acc, curr) => acc + curr.price, 0),
               })

@@ -1,0 +1,10 @@
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.orders {
+  margin-bottom: 20px;
+  border-bottom: 1px solid black;
+}
