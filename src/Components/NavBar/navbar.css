@@ -1,0 +1,12 @@
+.nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: gray;
+  margin-bottom: 20px;
+}
+
+a {
+  list-style-type: none;
+  font-size: 18px;
+}
