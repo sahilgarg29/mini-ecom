@@ -22,7 +22,8 @@ const cartState = [];
 export const cartReducer = (state = cartState, action) => {
   switch (action.type) {
     case ADD_TO_CART:
-      return [...state, { ...action.payload, quantity: 1 }];
+      const ns = state.filter((e) => e.id !== action.payload.id);
+      return [...ns, { ...action.payload, quantity: 1 }];
     case UPDATE_QUANTITY:
       const newState = [...state];
       newState.forEach((product) => {
